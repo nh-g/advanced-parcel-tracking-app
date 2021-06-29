@@ -1,0 +1,10 @@
+#home
+    @include page-template
+
+@media screen and ( min-width: $media-larger-phablet)
+    #home
+        .order-list
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+            grid-column-gap: 24px
+            grid-row-gap: 24px
