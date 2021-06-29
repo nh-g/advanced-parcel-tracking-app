@@ -23,7 +23,6 @@ function App() {
     .catch((error) => onFail(error));
   }, [setData,setStatus])
 
-  
 
   function onSuccess(json) {
     setData(json);
@@ -45,7 +44,6 @@ function App() {
       {/* Navigation Bar */}
         <NavigationBar />
       {/* Content */}
-        Hello Boxes
         {status === 0 && <StatusLoading/>}
         {status === 1 && <StatusLoaded data = {data}/>}
         {status === 2 && <StatusError />}
