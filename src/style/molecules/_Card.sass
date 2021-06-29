@@ -1,0 +1,66 @@
+.card
+    display: flex
+    align-items: center
+    text-decoration: none
+    @include content-box
+
+    .flexbox-expand-space
+        flex-grow: 1 //inspired by iOS to push items to the sides
+
+    .middle-content
+        width: 72px
+        text-align: center
+
+        .description-small
+            color: $color-secondary
+        .icon
+            color: $color-secondary
+            font-size: 14px
+    
+    .last-content
+        .cta
+            display: none
+        .icon
+            color: $color-primary
+
+.card:hover
+    background-color: $color-tertiary
+    cursor: pointer
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2)
+ 
+
+@media screen and ( min-width: $media-larger-phablet )
+  .card
+    flex-direction: column
+    text-align: center
+    padding: $space-medium 0 0 0
+    margin-bottom: 0
+
+    .description
+        font-size: 14px
+    .description-small
+        font-size: 12px
+  
+    .midle-content
+      margin: $space-medium 0  
+    //   padding: $space-medium
+    //   margin-bottom: $space-medium
+      .icon
+        font-size: 18px
+
+    .last-content
+      width: 100%
+      height: 44px
+      line-height: 44px
+      background-color: $color-secondary
+      border-bottom-left-radius: $radius
+      border-bottom-right-radius: $radius
+
+      .cta
+        display: initial
+        color: white
+        font-weight: 500
+        font-size: 14px
+
+      .icon
+        display: none
