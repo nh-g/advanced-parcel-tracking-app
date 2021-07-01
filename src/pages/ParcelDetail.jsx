@@ -18,7 +18,7 @@ export default function ParcelDetail({ data }) {
     } = selectedParcel
 
     return (
-      <section id="order-detail">
+      <section id="parcel-detail">
         <header>
           <h1>
             Order from {sender}
@@ -28,7 +28,7 @@ export default function ParcelDetail({ data }) {
           </p>
         </header>
 
-        <div className="column">
+        <div className="columns">
           <ParcelInformation parcel = {selectedParcel}/>
         </div>
 

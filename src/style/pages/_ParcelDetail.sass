@@ -1,0 +1,45 @@
+#parcel-detail
+    @include page-template
+
+    .columns
+        margin-bottom: $space-medium
+
+    .content-box
+        @include content-box
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+
+    .data-field:last-child
+        hr
+            display: none
+    
+    .footer
+        text-align: center
+        
+@media screen and ( min-width: $media-larger-tablet )
+#parcel-detail
+    .columns
+        display: flex
+
+        .content-box
+            order: 1
+            width: 400px
+            border-radius: $radius
+            margin-right: $space-big
+            margin-bottom: 0
+        
+        .footer
+            text-align: right
+
+.data-field
+  hr
+    margin: $space-big 0
+    height: 5px
+    background-image: url("../../assets/images/squiggly-salmon.svg")
+    background-repeat: repeat-x
+    border: none
+
+@media screen and ( min-width: $media-larger-phablet )
+  .data-field
+    hr
+      margin: $space-medium 0
