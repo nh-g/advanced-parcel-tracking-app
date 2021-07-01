@@ -12,7 +12,7 @@ export default function StatusLoaded({data}) {
         <Route path="/" exact>
             <Home data= {data}/>
         </Route>
-        <Route path="/order">
+        <Route path="/order/:parcel_id">
             <ParcelDetail data ={data}/>
         </Route>
       </Switch>
