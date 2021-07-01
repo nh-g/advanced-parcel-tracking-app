@@ -7,11 +7,18 @@ import {Link} from "react-router-dom";
 export default function NavigationBar() {
     return (
       <nav id="navigation-bar">
-        <Link to="/" style={{textDecoration: 'none', color: 'white', fontWeight: 'bolder',}}>
-        {/* <Link style={{ color: "white" }}> */}
-          <h1 style={{fontSize:"20px"}}>
-            {" "}
-            <span style={{fontFamily: 'cursive'}}>P</span>tracker
+        <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+            color: "white",
+            fontWeight: "bolder",
+          }}
+        >
+          {/* <Link style={{ color: "white" }}> */}
+          <h1 style={{ fontSize: "20px", fontFamily: 'sans-serif'}}>
+            Parceltracker
+            {/* <span style={{fontFamily: 'cursive'}}>Parcel</span>tracker */}
           </h1>
           {/* <img src={logo} alt="P-tracker logo" title="P-tracker logo" /> */}
         </Link>
