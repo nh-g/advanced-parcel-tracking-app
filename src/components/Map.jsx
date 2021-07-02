@@ -23,12 +23,17 @@ export default function Map({ coordinates, parcel }) {
           }}
         />
         {activePop && (
-        <Popup
-          position={coordinates}
-          onClose={() => {
-            setActivePop(null);
-          }}
-        /> 
+          <Popup
+            position={coordinates}
+            onClose={() => {
+              setActivePop(null);
+            }}
+          >
+            <div>
+              <h2>{parcel.location_name}</h2>
+              <p>{parcel.location_id}</p>
+            </div>
+          </Popup>
         )}
       </LeafletMap>
     );
