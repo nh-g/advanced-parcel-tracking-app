@@ -15,8 +15,8 @@ export default function ParcelDetail({ data }) {
     const {
       location_coordinate_latitude: latitude,
       location_coordinate_longitude: longitude,
-      sender, 
-    } = selectedParcel
+      sender,
+    } = selectedParcel;
 
     return (
       <section id="parcel-detail">
@@ -26,8 +26,8 @@ export default function ParcelDetail({ data }) {
         </header>
 
         <div className="columns">
-          <Map coordinates={[latitude, longitude]} parcel={selectedParcel} />
           <ParcelInformation parcel={selectedParcel} />
+          <Map coordinates={[latitude, longitude]} parcel = {selectedParcel} />
         </div>
 
         <footer className="footer">
