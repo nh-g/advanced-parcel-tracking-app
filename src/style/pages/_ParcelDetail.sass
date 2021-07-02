@@ -3,6 +3,11 @@
 
     .columns
         margin-bottom: $space-medium
+    
+    .map
+    z-index: 500 // to force the redraw of border-radius
+    border-radius: $radius $radius 0 0
+
 
     .content-box
         @include content-box
@@ -27,6 +32,13 @@
             border-radius: $radius
             margin-right: $space-big
             margin-bottom: 0
+
+        .map
+            order: 2
+            width: 100% // to force the map to play along flexbox
+            height: 480px // to force the map to play along flexbox
+            border-radius: $radius
+
         
         .footer
             text-align: right
