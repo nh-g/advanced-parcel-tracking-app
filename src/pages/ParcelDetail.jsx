@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 
 // Project files
 import ParcelInformation from '../components/ParcelInformation';
+import Map from '../components/Map';
 export default function ParcelDetail({ data }) {
     console.log("detail page data", [data])
 
@@ -20,21 +21,18 @@ export default function ParcelDetail({ data }) {
     return (
       <section id="parcel-detail">
         <header>
-          <h1>
-            Order from {sender}
-          </h1>
-          <p>
-            You can find parcel information below
-          </p>
+          <h1>Order from {sender}</h1>
+          <p>You can find parcel information below</p>
         </header>
 
         <div className="columns">
-          <ParcelInformation parcel = {selectedParcel}/>
+          <Map coordinates={[latitude, longitude]} parcel={selectedParcel} />
+          <ParcelInformation parcel={selectedParcel} />
         </div>
 
         <footer className="footer">
           <Link className="button" to="/">
-            Go back 
+            Go back
           </Link>
         </footer>
       </section>
