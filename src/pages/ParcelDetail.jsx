@@ -26,8 +26,8 @@ export default function ParcelDetail({ data }) {
         </header>
 
         <div className="columns">
+          <Map coordinates={[latitude, longitude]} parcel={selectedParcel} />
           <ParcelInformation parcel={selectedParcel} />
-          <Map coordinates={[latitude, longitude]} parcel = {selectedParcel} />
         </div>
 
         <footer className="footer">
