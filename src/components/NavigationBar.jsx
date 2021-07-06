@@ -3,6 +3,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 //Project files
 // import logo from '../assets/images/logo.svg'
+import mapPin from '../assets/images/map-pin.png'
 
 export default function NavigationBar() {
     return (
@@ -30,7 +31,7 @@ export default function NavigationBar() {
             fontWeight: "bolder",
           }}
         >
-          Map
+          <img src={mapPin} style = {{width: "20px", height: "20px"}} title="Track Map"/> 
         </Link>
       </nav>
     );
