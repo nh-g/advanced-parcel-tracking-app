@@ -5,8 +5,8 @@
         margin-bottom: $space-medium
     
     .map
-    z-index: 500 // to force the redraw of border-radius
-    border-radius: $radius $radius 0 0
+        z-index: 500 // to force the redraw of border-radius
+        border-radius: $radius $radius 0 0
 
 
     .content-box
@@ -21,35 +21,37 @@
     .footer
         text-align: center
         
-@media screen and ( min-width: $media-larger-tablet )
-#parcel-detail
-    .columns
-        display: flex
-
-        .content-box
-            order: 1
-            width: 400px
-            border-radius: $radius
-            margin-right: $space-big
-            margin-bottom: 0
-
-        .map
-            order: 2
-            width: 100% // to force the map to play along flexbox
-            height: 480px // to force the map to play along flexbox
-            border-radius: $radius
-
+    .data-field
+        hr
+            margin: $space-big 0
+            height: 5px
+            background-image: url("../../assets/images/squiggly-salmon.svg")
+            background-repeat: repeat-x
+            border: none
         
-        .footer
-            text-align: right
+@media screen and ( min-width: $media-larger-tablet )
+    #parcel-detail
+        .columns
+            display: flex
 
-.data-field
-  hr
-    margin: $space-big 0
-    height: 5px
-    background-image: url("../../assets/images/squiggly-salmon.svg")
-    background-repeat: repeat-x
-    border: none
+            .content-box
+                order: 1
+                width: 400px
+                border-radius: $radius
+                margin-right: $space-big
+                margin-bottom: 0
+
+            .map
+                order: 2
+                width: 100% // to force the map to play along flexbox
+                height: 480px // to force the map to play along flexbox
+                border-radius: $radius
+
+            
+            .footer
+                text-align: right
+
+
 
 @media screen and ( min-width: $media-larger-phablet )
   .data-field
