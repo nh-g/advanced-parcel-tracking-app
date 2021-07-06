@@ -5,15 +5,19 @@ import { Route, Switch } from 'react-router-dom'
 // Project files
 import Home from '../../pages/Home';
 import ParcelDetail from '../../pages/ParcelDetail';
+import TrackMap from '../../pages/TrackMap';
 export default function StatusLoaded({data}) {
     console.log("loaded", [data])
     return (
       <Switch>
         <Route path="/" exact>
-            <Home data= {data}/>
+          <Home data={data} />
         </Route>
         <Route path="/order/:parcel_id">
-            <ParcelDetail data ={data}/>
+          <ParcelDetail data={data} />
+        </Route>
+        <Route path="/track">
+          <TrackMap data={data} />
         </Route>
       </Switch>
     );

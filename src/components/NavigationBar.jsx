@@ -15,12 +15,22 @@ export default function NavigationBar() {
             fontWeight: "bolder",
           }}
         >
-          {/* <Link style={{ color: "white" }}> */}
-          <h1 style={{ fontSize: "20px", fontFamily: 'sans-serif'}}>
-            Parceltracker
-            {/* <span style={{fontFamily: 'cursive'}}>Parcel</span>tracker */}
+          <h1 style={{ fontSize: "20px", fontFamily: "sans-serif" }}>
+            Ptracker
           </h1>
-          {/* <img src={logo} alt="P-tracker logo" title="P-tracker logo" /> */}
+        </Link>
+
+        <div className="flexbox-expand-space" />
+
+        <Link
+          to="/track"
+          style={{
+            textDecoration: "none",
+            color: "white",
+            fontWeight: "bolder",
+          }}
+        >
+          Map
         </Link>
       </nav>
     );
