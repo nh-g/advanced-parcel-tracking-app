@@ -31,7 +31,8 @@ export default function Map({ coordinates, parcel }) {
           >
             <div>
               <h2>{parcel.location_name}</h2>
-              <p>{parcel.location_id}</p>
+              <p className="description">{parcel.sender}</p>
+              <p className="description-small">{parcel.status}</p>
             </div>
           </Popup>
         )}
