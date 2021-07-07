@@ -20,7 +20,7 @@ export default function TrackMap({ data }) {
 
       <header>
         <h1>Track all your parcels</h1>
-        <p>You can find each parcel information by clicking to the pin</p>
+        <p>You can find each parcel information popup by clicking to the pin</p>
       </header>
 
       <div>
