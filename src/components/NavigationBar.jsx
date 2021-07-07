@@ -3,8 +3,8 @@ import React from 'react';
 import {Link} from "react-router-dom";
 //Project files
 // import logo from '../assets/images/logo.svg'
-import mapPin from '../assets/images/map-pin.png'
-
+// import mapPin from '../assets/images/map-pin.png'
+import SearchBar from './SearchBar';
 export default function NavigationBar() {
     return (
       <nav id="navigation-bar">
@@ -21,6 +21,8 @@ export default function NavigationBar() {
           </h1>
         </Link>
 
+        <SearchBar />
+
         <div className="flexbox-expand-space" />
 
         <Link
@@ -31,7 +33,9 @@ export default function NavigationBar() {
             fontWeight: "bolder",
           }}
         >
-          <img src={mapPin} style = {{width: "20px", height: "20px"}} title="Track Map"/> 
+          <img src="https://img.icons8.com/ios/50/000000/map--v2.png"             style={{ width: "20px", height: "20px"}}
+            title="Track Map"/>
+          {/* <img src={mapPin} style = {{width: "20px", height: "20px"}} title="Track Map"/>  */}
         </Link>
       </nav>
     );
