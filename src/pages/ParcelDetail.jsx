@@ -1,10 +1,10 @@
 // NPM package
-import React from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 // Project files
 import ParcelInformation from '../components/ParcelInformation';
 import Map from '../components/Map';
+import ButtonGoBack from '../components/ButtonGoBack';
 
 export default function ParcelDetail({ data }) {
     const { parcel_id} = useParams()
@@ -37,14 +37,12 @@ export default function ParcelDetail({ data }) {
         ) : (
           <div>
             <h2> Not Found. </h2>
-            <h4>⬅ Please Go back to the list of all parcels.</h4>
+            <h4>⬅ Please go back to the list of all parcels.</h4>
           </div>
         )}
 
         <footer className="footer">
-          <Link className="button" to="/">
-            Go back
-          </Link>
+            <ButtonGoBack />
         </footer>
       </section>
     );

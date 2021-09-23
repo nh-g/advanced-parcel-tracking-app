@@ -1,23 +1,23 @@
+// NPM packages
 import React, {useState} from 'react'
-import {Link} from "react-router-dom";
 import {Map as LeafletMap, Marker, Popup, TileLayer} from "react-leaflet"
 import {icon} from "leaflet"
 
+// Project files
 import mapPin from "../assets/images/map-pin.png"
 import FormattedTime from '../components/FormattedTime'
+import ButtonGoBack from '../components/ButtonGoBack'
+
 export default function TrackMap({ data }) {
-    console.log("track map page data", [data]);
-
-
+  // Properties
   const [activePop, setActivePop] = useState(null);
   const zoomLevel = 1;
   const mapURL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
   const attribution = `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`;
   const myIcon = icon({ iconUrl: mapPin, iconSize: [36, 36] });
-
+  
   return (
     <section id="track-map">
-
       <header>
         <h1>Track all your parcels</h1>
         <p>You can find each parcel information popup by clicking to the pin</p>
@@ -64,9 +64,7 @@ export default function TrackMap({ data }) {
       </div>
 
       <footer className="footer">
-        <Link className="button" to="/">
-          Go back
-        </Link>
+        <ButtonGoBack />
       </footer>
     </section>
   );

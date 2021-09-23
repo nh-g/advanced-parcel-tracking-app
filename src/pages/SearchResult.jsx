@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 
 // Project files
 import Card from '../components/Card';
+import ButtonGoBack from '../components/ButtonGoBack';
 export default function SearchResult({match, data}) {
     const { query } = useParams();
 
@@ -33,9 +34,7 @@ export default function SearchResult({match, data}) {
         </div>
         
         <footer className="footer">
-          <Link className="button" to="/">
-            Go back
-          </Link>
+          <ButtonGoBack/>
         </footer>
       </div>
     );
