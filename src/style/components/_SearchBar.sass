@@ -1,37 +1,31 @@
 .search-bar
-    // margin-top: 10px
     text-align: center
-    input
-        // text-align: right
-        // width: 250px
-        // height: 35px
-        // box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px
-        // // box-sizing: border-box
-        // border: none
-        // outline: none
-        // border-radius: 40px 40px
-        // // border-radius: 20px 0px 20px 0px
-        // font-size: 13px
-        // background-color: $color-primary
-        // background-repeat: no-repeat
-        // background-position: left 
-        // color: white
         
-        $height: 38px
+    &:active
+        transform: scale(.96)
+
+    input
+        $height: 35px
         display: inline-block
-        min-width: 250px
+        min-width: 50%
         height: $height
         border-radius: $height
         border: 1px solid $color-secondary
         outline: none
         background-image: url("../../assets/images/search.svg")
         background-repeat: no-repeat
-        background-position: left 5% top 50%
-        text-align: right
+        background-position: right 5% top 50%
+        padding: $space-medium
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px        
         background-color: $color-primary
-
+        box-sizing: border-box
+        transition: all .3s ease
+        
         &:hover
             background-color: white
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
-            
+
+@media (min-width:$media-larger-phablet) 
+    .search-bar input:hover
+        width: 300px
+

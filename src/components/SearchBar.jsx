@@ -1,28 +1,27 @@
-import React,{useState} from 'react'
+import {useState} from 'react'
 import { useHistory } from "react-router-dom";
 
-export default function SearchBar({data}) {
+export default function SearchBar() {
   // Local state
   const [query, setQuery] = useState("");
-  // Constants
+
+  // Properties
   const history = useHistory();
-//   const search_logo = <img src="https://img.icons8.com/ios/30/000000/search--v3.png" />
-
-
+  
   // Methods
   function search(event) {
     event.preventDefault();
     history.push(`/search_results/${query}`);
   }
+  console.log("search bar", [query])
 
   return (
     <div>
       <form onSubmit={search} className="search-bar">
-        {/* {search_logo} */}
         <input 
           type="text"
           id="sender-search"
-          placeholder="Search  "
+          placeholder="  Search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           className="search-box"
