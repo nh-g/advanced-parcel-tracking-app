@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 //Project files
 import "./style/style.sass"
-import NavigationBar from "./components/NavigationBar"
-import BackupData from "./data/backup_orders"
+import BackupData from "./data/backup_orders";
+import NavigationBar from "./components/NavigationBar";
+import Footer from './components/Footer';
 import StatusLoading from "./components/status/StatusLoading";
 import StatusError from './components/status/StatusError';
 import StatusLoaded from "./components/status/StatusLoaded";
@@ -47,6 +48,7 @@ function App() {
         {status === 0 && <StatusLoading/>}
         {status === 1 && <StatusLoaded data = {data}/>}
         {status === 2 && <StatusError />}
+        <Footer/>
       </BrowserRouter>
     </div>
   );
