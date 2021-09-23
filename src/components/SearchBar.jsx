@@ -11,9 +11,8 @@ export default function SearchBar() {
   // Methods
   function search(event) {
     event.preventDefault();
-    history.push(`/search_results/${query}`);
+    history.push(`/results/${query}`);
   }
-  console.log("search bar", [query])
 
   return (
     <div>
