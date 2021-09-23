@@ -45,3 +45,15 @@ $radius: 8px
 
   header
     margin-bottom: $space-medium
+  
+  footer
+    margin-top: $space-medium
+    align-content: center
+    text-align: center
+
+@mixin order-list
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+    grid-column-gap: $space-big
+    grid-row-gap: $space-big
+
