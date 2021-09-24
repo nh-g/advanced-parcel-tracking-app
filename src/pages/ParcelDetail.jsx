@@ -22,7 +22,7 @@ export default function ParcelDetail({ data }) {
     
     return (
       <section id="parcel-detail">
-        {selectedParcel != null && selectedParcel != undefined ? (
+        {selectedParcel !== null && selectedParcel !== undefined ? (
           <>
             <header>
               <h1>{t("listView:heading1")} {sender}</h1>
