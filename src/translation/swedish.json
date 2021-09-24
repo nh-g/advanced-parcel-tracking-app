@@ -3,7 +3,7 @@
     "heading1": "Hej",
     "heading2": "Vi har några paket till dig:",
     "item": {
-      "parcel_id": "Paket",
+      "parcel_title": "Paket",
       "status": {
         "order-info-received": "Beställnings info fått",
         "on-the-way": "På väg",
@@ -34,6 +34,7 @@
     "no_internet_1": "Vi kunde inte få dina paket.",
     "no_internet_2": "Kontrollera din internetanslutning.",
     "button-label": "Gå tillbaka",
-    "search-bar": "Sök efter namn eller ID"
+    "search-bar": "Sök efter namn eller ID",
+    "date-time": "kl"
   }
 }

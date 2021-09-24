@@ -3,7 +3,7 @@
     "heading1": "Hi",
     "heading2": "We have some parcels for you:",
     "item": {
-      "parcel_id": "Parcel",
+      "parcel_title": "Parcel",
       "status": {
         "order-info-received": "Order info received",
         "on-the-way": "On the way",
@@ -34,6 +34,7 @@
     "no_internet_1": "We could not get your parcels.",
     "no_internet_2": "Please check your internet connection.",
     "button-label": "Go back",
-    "search-bar": "Search by name or ID"
+    "search-bar": "Search by name or ID",
+    "date-time": "at"
   }
 }

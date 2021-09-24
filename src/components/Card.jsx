@@ -9,7 +9,9 @@ export default function Card({parcel}) {
     const { t } = useTranslation();
 
     const {parcel_id, sender, status, eta} = parcel;
-    const textParcel = `Parcel #${parcel_id}`
+    const textParcel = `${t("listView:item:parcel_title")} #${parcel_id}`;
+    const textStatus = t(`listView:item:status:${status}`);
+
 
     return (
       <Link className="card" to={`/parcels/${parcel_id}`}>
@@ -29,7 +31,7 @@ export default function Card({parcel}) {
 
         <div className="middle-content">
           <span className={`icon icon-${status}`}></span>
-          <p className="description-small">{status}</p>
+          <p className="description-small">{textStatus}</p>
         </div>
 
         <div style={{ marginBottom: "20px" }}></div>
