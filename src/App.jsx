@@ -1,6 +1,7 @@
 //NPM Packages
 import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
+
 //Project files
 import "./style/style.sass"
 import BackupData from "./data/backup_orders";
@@ -9,13 +10,14 @@ import Footer from './components/Footer';
 import StatusLoading from "./status/StatusLoading";
 import StatusError from './status/StatusError';
 import StatusLoaded from "./status/StatusLoaded";
-function App() {
+
+export default function App() {
   // Local states
   const [status, setStatus] = useState(0);
   const [data, setData] = useState([])
   // Constants
   const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840"; // change the url to trigger a failure status
-  const DEBUG_MODE = false
+  const DEBUG_MODE = false;
   // Methods
   useEffect(() => {
   fetch(API_URL, {mode: "cors"})
@@ -23,7 +25,6 @@ function App() {
     .then((json) => onSuccess(json))
     .catch((error) => onFail(error));
   }, [setData,setStatus])
-
 
   function onSuccess(json) {
     setData(json);
@@ -42,9 +43,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      {/* Navigation Bar */}
         <NavigationBar />
-      {/* Content */}
         {status === 0 && <StatusLoading/>}
         {status === 1 && <StatusLoaded data = {data}/>}
         {status === 2 && <StatusError />}
@@ -54,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+;
