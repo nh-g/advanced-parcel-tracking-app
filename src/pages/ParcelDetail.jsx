@@ -25,8 +25,10 @@ export default function ParcelDetail({ data }) {
         {selectedParcel !== null && selectedParcel !== undefined ? (
           <>
             <header>
-              <h1>{t("listView:heading1")} {sender}</h1>
-              <p>{t("listView:heading2")}</p>
+              <h1>
+                {t("detailView:heading1")} {sender}
+              </h1>
+              <p>{t("detailView:heading2")}</p>
             </header>
 
             <div className="columns">
