@@ -34,7 +34,21 @@
     "no_internet_1": "Vi kunde inte få dina paket.",
     "no_internet_2": "Kontrollera din internetanslutning.",
     "button-label": "Gå tillbaka",
+    "date-time": "kl",
+    "not-found": "Hittades inte.",
+    "not-found-description": "⬅ Gå tillbaka till listan över alla paket."
+  },
+  "search": {
     "search-bar": "Sök efter namn eller ID",
-    "date-time": "kl"
+    "search-result": {
+      "heading": "Vi hittade",
+      "succeeded": "paket som matchade din sökning",
+      "failed": "Inga resultat funna. Prova en annan sökord."
+    }
+  },
+  "trackMap": {
+    "heading1": "Spåra alla dina paket",
+    "heading2": "Du kan visa varje paketinformation popup genom att klicka på knappen.",
+    "arriving": "Kommer"
   }
 }

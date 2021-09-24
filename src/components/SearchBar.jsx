@@ -23,7 +23,7 @@ export default function SearchBar() {
         <input 
           type="text"
           id="sender-search"
-          placeholder={t("common:search-bar")}
+          placeholder={t("search:search-bar")}
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           className="search-box"

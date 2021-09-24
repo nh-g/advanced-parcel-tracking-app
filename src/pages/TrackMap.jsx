@@ -2,6 +2,7 @@
 import {useState} from 'react'
 import {Map as LeafletMap, Marker, Popup, TileLayer} from "react-leaflet"
 import {icon} from "leaflet"
+import { useTranslation } from "react-i18next";
 
 // Project files
 import mapPin from "../assets/images/map-pin.png"
@@ -9,6 +10,8 @@ import FormattedTime from '../components/FormattedTime'
 import ButtonGoBack from '../components/ButtonGoBack'
 
 export default function TrackMap({ data }) {
+  const { t } = useTranslation();
+
   // Properties
   const [activePop, setActivePop] = useState(null);
   const zoomLevel = 1;
@@ -19,8 +22,8 @@ export default function TrackMap({ data }) {
   return (
     <section id="track-map">
       <header>
-        <h1>Track all your parcels</h1>
-        <p>You can find each parcel information popup by clicking to the pin</p>
+        <h1>{t("trackMap:heading1")}</h1>
+        <p>{t("trackMap:heading2")}</p>
       </header>
 
       <div>
@@ -52,10 +55,13 @@ export default function TrackMap({ data }) {
             >
               <div>
                 <h2>Located at {activePop.location_name}</h2>
-                <p className="description">From {activePop.sender}</p>
+                <p className="description">
+                  {t("detailView:heading1")} {activePop.sender}
+                </p>
                 <p className="description-small">{activePop.status}</p>
                 <p className="description-small">
-                  Arriving at {<FormattedTime dateString={activePop.eta} />}
+                  {t("trackMap:arriving")}{" "}
+                  {<FormattedTime dateString={activePop.eta} />}
                 </p>
               </div>
             </Popup>

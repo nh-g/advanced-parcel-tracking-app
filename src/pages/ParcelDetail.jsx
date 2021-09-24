@@ -1,5 +1,6 @@
 // NPM package
 import { useParams } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 // Project files
 import ParcelInformation from '../components/ParcelInformation';
@@ -7,6 +8,8 @@ import Map from '../components/Map';
 import ButtonGoBack from '../components/ButtonGoBack';
 
 export default function ParcelDetail({ data }) {
+    const { t } = useTranslation();
+
     const { parcel_id} = useParams()
 
     const selectedParcel = data.find((item) => item.parcel_id === parcel_id)
@@ -22,8 +25,8 @@ export default function ParcelDetail({ data }) {
         {selectedParcel != null && selectedParcel != undefined ? (
           <>
             <header>
-              <h1>Parcel from {sender}</h1>
-              <p>You can find parcel information below</p>
+              <h1>{t("listView:heading1")} {sender}</h1>
+              <p>{t("listView:heading2")}</p>
             </header>
 
             <div className="columns">
@@ -36,13 +39,13 @@ export default function ParcelDetail({ data }) {
           </>
         ) : (
           <div>
-            <h2> Not Found. </h2>
-            <h4>⬅ Please go back to the list of all parcels.</h4>
+            <h2> {t("common:not-found")} </h2>
+            <h4>{t("common:not-found-description")}</h4>
           </div>
         )}
 
         <footer className="footer">
-            <ButtonGoBack />
+          <ButtonGoBack />
         </footer>
       </section>
     );

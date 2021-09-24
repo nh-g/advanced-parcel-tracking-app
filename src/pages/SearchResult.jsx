@@ -1,10 +1,13 @@
 // NPM packages
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // Project files
 import Card from "../components/Card";
 import ButtonGoBack from "../components/ButtonGoBack";
-export default function SearchResult({ match, data }) {
+export default function SearchResult({ data }) {
+  const { t } = useTranslation();
+
   const { query } = useParams();
 
   const searchResults = data.filter(
@@ -21,8 +24,8 @@ export default function SearchResult({ match, data }) {
     <div id="results" className="container">
       <header>
         <h2>
-          We found {searchResults.length} parcels that matched you search"
-          {query}"
+          {t("search:search-result:heading")} {searchResults.length}{" "}
+          {t("search:search-result:succeeded")} "{query}"
         </h2>
       </header>
 
@@ -30,7 +33,7 @@ export default function SearchResult({ match, data }) {
         {searchResults.length > 0 ? (
           parcels
         ) : (
-          <p>No results found. Please try another search query.</p>
+          <p>{t("search:search-result:failed")}</p>
         )}
       </div>
 

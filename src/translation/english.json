@@ -14,8 +14,8 @@
     }
   },
   "detailView": {
-    "heading1": "Order from",
-    "heading2": "This is the information available:",
+    "heading1": "Parcel from",
+    "heading2": "You can find parcel information below:",
     "labels": {
       "location": "Location",
       "eta": "Estimated delivery time",
@@ -34,7 +34,21 @@
     "no_internet_1": "We could not get your parcels.",
     "no_internet_2": "Please check your internet connection.",
     "button-label": "Go back",
+    "date-time": "at",
+    "not-found": "Not Found.",
+    "not-found-description": "⬅ Please go back to the list of all parcels."
+  },
+  "search": {
     "search-bar": "Search by name or ID",
-    "date-time": "at"
+    "search-result":{
+      "heading": "We found",
+      "succeeded": "parcels that matched your search",
+      "failed": "No results found. Please try another search query."
+    }
+  },
+  "trackMap":{
+    "heading1": "Track all your parcels",
+    "heading2": "You can view each parcel information popup by clicking to the pin.",
+    "arriving": "Arriving"
   }
 }
