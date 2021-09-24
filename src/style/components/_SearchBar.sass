@@ -8,7 +8,7 @@
         background-color: white
         $height: 35px
         display: inline-block
-        min-width: 50%
+        width: 0%
         height: $height
         border-radius: $height
         border: 1px solid $color-secondary
@@ -23,8 +23,24 @@
         
         &:hover
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+            width: 100%
 
 @media (min-width:$media-larger-phablet) 
-    .search-bar input:hover
-        width: 300px
+    .search-bar input
+        width: 200px
+        &:hover
+            width: 300px
 
+@media (max-width:$media-small-mobile) 
+    .search-bar 
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 
+        
+        input
+            width: 50%
+            &:hover
+                width: 100px
+
+                
+
+        
