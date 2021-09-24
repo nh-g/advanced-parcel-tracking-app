@@ -1,9 +1,13 @@
-import React from "react";
+// NPM Packages
+import { useTranslation } from "react-i18next";
 
+// Project files
 import Card from "../components/Card";
 
 export default function Home({ data }) {
-  const userGreeter = `Hi ${data[0].user_name}`;
+  const {t} = useTranslation();
+
+  const userGreeter = `${t("listView:heading1")} ${data[0].user_name}`;
 
   const CardArray = data.map((item) => {
     return <Card key={item.id} parcel={item} />;
@@ -14,7 +18,7 @@ export default function Home({ data }) {
         <h1> {userGreeter}</h1>
       </header>
       <h4 style={{ fontWeight: 300, letterSpacing: 0.5 }}>
-        We have some parcels for you:
+        {t("listView:heading2")}
       </h4>
       <div className="list">{CardArray}</div>
     </section>

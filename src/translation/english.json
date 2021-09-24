@@ -1,0 +1,37 @@
+{
+  "listView": {
+    "heading1": "Hi",
+    "heading2": "We have some parcels for you:",
+    "item": {
+      "parcel_id": "Parcel",
+      "status": {
+        "order-info-received": "Order info received",
+        "on-the-way": "On the way",
+        "delivered": "Delivered",
+        "ready-for-pickup": "Ready for pickup"
+      },
+      "view-detail": "View details"
+    }
+  },
+  "detailView": {
+    "heading1": "Order from",
+    "heading2": "This is the information available:",
+    "labels": {
+      "location": "Location",
+      "eta": "Estimated delivery time",
+      "last_update": "Last update",
+      "note": "Note",
+      "verification": "Additional observations"
+    },
+    "descriptions": {
+      "eta": "Sorry we don't have an estimated delivery date yet",
+      "verification": "A verification is required for this package"
+    },
+    "button-label": "Go back"
+  },
+  "common": {
+    "loading": "Getting parcels",
+    "no_internet_1": "We could not get your parcels.",
+    "no_internet_2": "Please check your internet connection."
+  }
+}
