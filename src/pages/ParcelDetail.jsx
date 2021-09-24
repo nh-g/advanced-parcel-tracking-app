@@ -22,7 +22,7 @@ export default function ParcelDetail({ data }) {
         {selectedParcel != null && selectedParcel != undefined ? (
           <>
             <header>
-              <h1>Order from {sender}</h1>
+              <h1>Parcel from {sender}</h1>
               <p>You can find parcel information below</p>
             </header>
 

@@ -7,7 +7,7 @@ export default function Card({parcel}) {
     const {parcel_id, sender, status, eta} = parcel;
     const textParcel = `Parcel #${parcel_id}`
     return (
-      <Link className="card" to={`/order/${parcel_id}`}>
+      <Link className="card" to={`/parcels/${parcel_id}`}>
         <div className="first-content">
           <p className="description">{sender}</p>
           <p className="description-small" style={{ color: "#FFA2A2" }}>

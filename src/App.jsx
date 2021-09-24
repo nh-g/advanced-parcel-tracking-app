@@ -6,9 +6,9 @@ import "./style/style.sass"
 import BackupData from "./data/backup_orders";
 import NavigationBar from "./components/NavigationBar";
 import Footer from './components/Footer';
-import StatusLoading from "./components/status/StatusLoading";
-import StatusError from './components/status/StatusError';
-import StatusLoaded from "./components/status/StatusLoaded";
+import StatusLoading from "./status/StatusLoading";
+import StatusError from './status/StatusError';
+import StatusLoaded from "./status/StatusLoaded";
 function App() {
   // Local states
   const [status, setStatus] = useState(0);
