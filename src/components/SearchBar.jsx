@@ -1,7 +1,10 @@
 import {useState} from 'react'
 import { useHistory } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function SearchBar() {
+  const { t } = useTranslation();
+
   // Local state
   const [query, setQuery] = useState("");
 
@@ -20,7 +23,7 @@ export default function SearchBar() {
         <input 
           type="text"
           id="sender-search"
-          placeholder="  Search"
+          placeholder={t("common:search-bar")}
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           className="search-box"

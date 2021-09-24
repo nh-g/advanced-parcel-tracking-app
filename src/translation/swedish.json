@@ -21,17 +21,19 @@
       "eta": "Beräknad leveranstid",
       "last_update": "Senaste uppdateringen",
       "note": "Notera",
-      "verification": "Ytterligare observationer"
+      "verification-title": "Ytterligare verifiering",
+      "verification-description": "Vänligen visa ditt identitetsdokument när du hämtar"
     },
     "descriptions": {
       "eta": "Tyvärr har vi inte ett beräknad leveransdatum än",
       "verification": "En verifiering krävs för detta paket"
-    },
-    "button-label": "Gå tillbaka"
+    }
   },
   "common": {
     "loading": "Få paket",
     "no_internet_1": "Vi kunde inte få dina paket.",
-    "no_internet_2": "Kontrollera din internetanslutning."
+    "no_internet_2": "Kontrollera din internetanslutning.",
+    "button-label": "Gå tillbaka",
+    "search-bar": "Sök efter namn eller ID"
   }
 }

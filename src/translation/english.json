@@ -21,17 +21,19 @@
       "eta": "Estimated delivery time",
       "last_update": "Last update",
       "note": "Note",
-      "verification": "Additional observations"
+      "verification-title": "Additional verification",
+      "verification-description": "Please show your identity document when pick up"
     },
     "descriptions": {
       "eta": "Sorry we don't have an estimated delivery date yet",
       "verification": "A verification is required for this package"
-    },
-    "button-label": "Go back"
+    }
   },
   "common": {
     "loading": "Getting parcels",
     "no_internet_1": "We could not get your parcels.",
-    "no_internet_2": "Please check your internet connection."
+    "no_internet_2": "Please check your internet connection.",
+    "button-label": "Go back",
+    "search-bar": "Search by name or ID"
   }
 }
