@@ -1,9 +1,7 @@
-// NPM Package
-import React from 'react'
-
 // Project files
 import DataField from './DataField';
 import FormattedTime from './FormattedTime';
+
 export default function ParcelInformation({parcel}) {
     const {
         eta,

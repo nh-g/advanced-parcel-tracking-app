@@ -1,5 +1,5 @@
 // NPM packages
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // Project files
 import Card from "../components/Card";

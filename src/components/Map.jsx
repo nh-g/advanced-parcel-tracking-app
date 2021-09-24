@@ -1,5 +1,5 @@
 // NPM packages
-import React, {useState} from 'react'
+import {useState} from 'react'
 import { icon } from 'leaflet'
 import {Map as LeafletMap, Marker, Popup, TileLayer} from 'react-leaflet'
 
