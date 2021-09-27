@@ -5,18 +5,24 @@ import { useTranslation } from "react-i18next";
 // Project files
 import Card from "../components/Card";
 import ButtonGoBack from "../components/ButtonGoBack";
+import { filterList } from "../scripts/filterList";
+
 export default function SearchResult({ data }) {
   const { t } = useTranslation();
 
   const { query } = useParams();
 
-  const searchResults = data.filter(
-    (item) =>
-      item.sender.toUpperCase().includes(query.toUpperCase()) ||
-      item.parcel_id.toUpperCase().includes(query.toUpperCase())
+  const filterBySender = filterList(data, "sender", query);
+
+  const filterById = filterList(data, "parcel_id", query);
+
+  const filterByStatus = data.filter((item) =>
+    item.status.toUpperCase().replace(/-/g, "").includes(query.toUpperCase().replace(/\s/g, ""))
   );
 
-  const parcels = searchResults.map((item, index) => (
+  const searchResults = [...filterBySender, ...filterById, ...filterByStatus];
+
+  const Parcels = searchResults.map((item, index) => (
     <Card key={index} parcel={item} />
   ));
 
@@ -31,7 +37,7 @@ export default function SearchResult({ data }) {
 
       <div className="list">
         {searchResults.length > 0 ? (
-          parcels
+          Parcels
         ) : (
           <p>{t("search:search-result:failed")}</p>
         )}
