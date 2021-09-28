@@ -14,7 +14,7 @@ export default function ParcelInformation({parcel}) {
         location_name,
         notes,
         verification_required: verify
-    } = parcel || {};
+    } = parcel ?? {};
 
     return (
       <div className="content-box">

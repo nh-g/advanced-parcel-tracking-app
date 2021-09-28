@@ -18,7 +18,7 @@ export default function ParcelDetail({ data }) {
         location_coordinate_latitude: latitude,
         location_coordinate_longitude: longitude,
         sender,
-    } = selectedParcel || {};
+    } = selectedParcel ?? {};
     
     return (
       <section id="parcel-detail">
