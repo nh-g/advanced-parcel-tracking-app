@@ -15,7 +15,7 @@
         outline: none
         background-image: url("../../assets/images/search.svg")
         background-repeat: no-repeat
-        background-position: right 5% top 50%
+        background-position: center center
         padding: $space-medium
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px        
         box-sizing: border-box
@@ -24,10 +24,13 @@
         &:hover
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
             width: 40vw
+            background-position: right 5% top 50%
+
 
 @media (min-width:$media-larger-phablet) 
     .search-bar input
-        width: 200px
+        width: 300px
+        background-position: right 5% top 50%
         &:hover
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
             width: 30vw

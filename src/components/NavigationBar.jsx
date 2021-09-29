@@ -12,6 +12,7 @@ export default function NavigationBar() {
       <Link to="/">
         <h1>Ptracker</h1>
       </Link>
+      <div className="flexbox-expand-space" />
 
       <SearchBar />
 
@@ -27,8 +28,8 @@ export default function NavigationBar() {
             style={{ height: "30px" }}
           />
         </Link>
-        
-        <LanguageSwitcher/>
+
+        <LanguageSwitcher />
       </div>
     </nav>
   );

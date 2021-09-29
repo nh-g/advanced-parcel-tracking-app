@@ -39,7 +39,7 @@
     "not-found-description": "⬅ Gå tillbaka till listan över alla paket."
   },
   "search": {
-    "search-bar": "Sök efter namn eller ID",
+    "search-bar": "ID, namn eller status",
     "search-result": {
       "heading": "Vi hittade",
       "succeeded": "paket som matchade din sökning",

@@ -39,7 +39,7 @@
     "not-found-description": "⬅ Please go back to the list of all parcels."
   },
   "search": {
-    "search-bar": "Search by name or ID",
+    "search-bar": "ID, name or status",
     "search-result":{
       "heading": "We found",
       "succeeded": "parcels that matched your search",
