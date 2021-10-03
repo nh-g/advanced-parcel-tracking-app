@@ -20,13 +20,14 @@ export default function SearchBar() {
   return (
     <div>
       <form onSubmit={search} className="search-bar">
-        <input 
+        <input
           type="text"
           id="sender-search"
           placeholder={t("search:search-bar")}
           value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          onChange={(event) => setQuery(event.target.value.replace(/\s/g, ""))}
           className="search-box"
+          required
         />
       </form>
     </div>
