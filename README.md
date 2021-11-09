@@ -2,7 +2,7 @@
 
 ## 1. About project
 
-This is a simple app to check if the user can pick up their parcels. The app is composed of a list view where they can view all the parcels, and a detail view where they can see more information including a map to the precise location. User can also search, filter parcels and switch app's languages.
+This is a simple app to check if the user can pick up their parcels. The app is composed of a list view where they can view all the parcels, and a detail view where they can see more information. It has live tracking with a web map and also a world view to show where all the packages currently are. User can also search, filter parcels and switch app's languages.
 
 The project is done with the latest version of React and uses functional components with Hooks for better modularity in case it needs to be expanded.
 
