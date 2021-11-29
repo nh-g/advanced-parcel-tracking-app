@@ -15,30 +15,34 @@ export default function App() {
   // Local states
   const [status, setStatus] = useState(0);
   const [data, setData] = useState([])
+  
   // Constants
   const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840"; // change the url to trigger a failure status
   const DEBUG_MODE = false;
+
   // Methods
   useEffect(() => {
-  fetch(API_URL, {mode: "cors"})
-    .then((response) => response.json())
-    .then((json) => onSuccess(json))
-    .catch((error) => onFail(error));
-  }, [setData,setStatus])
+    fetch(API_URL, { mode: "cors" })
+      .then((response) => response.json())
+      .then((json) => onSuccess(json))
+      .catch((error) => onFail(error));
 
-  function onSuccess(json) {
-    setData(json);
-    setStatus(1);
-  }
-
-  function onFail(error) {
-    if (DEBUG_MODE) {
-      setData(BackupData);
+    function onSuccess(json) {
+      setData(json);
       setStatus(1);
-    }else {
-      setStatus(2);
     }
-  }
+    
+    function onFail(error) {
+      console.log("Fetching data error", error);
+      if (DEBUG_MODE) {
+        setData(BackupData);
+        setStatus(1);
+      } else {
+        setStatus(2);
+      }
+    }
+
+  }, [setData, setStatus, DEBUG_MODE]);
 
   return (
     <div className="App">
