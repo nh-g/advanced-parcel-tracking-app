@@ -21,6 +21,8 @@ export default function LanguageSwitcher() {
         i18n.changeLanguage("en");
         setLanguage("en");
         break;
+      default:
+        setLanguage("en");
     }
   }
 
