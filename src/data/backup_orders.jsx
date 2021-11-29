@@ -1,4 +1,4 @@
-export default [{
+const backupData = [{
     "id": 1,
     "status": "order-info-received",
     "eta": "2020-09-05T12:11:11Z",
@@ -159,3 +159,4 @@ export default [{
     "notes": "Bypass L Atrium to Pulm Trunk w Synth Sub, Perc Endo",
     "last_updated": "2020-09-18T13:49:25Z"
 }]
+export default backupData;
